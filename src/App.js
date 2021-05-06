@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/navbar";
+import {BrowserRouter, Route} from "react-router-dom";
+import Sidebar from "./components/sidebar";
+import Pole from "./components/pole";
+import n from './css/Navbar.module.css';
+import p from "./css/Pole.module.css";
+import s from "./css/Sidebar.module.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
+const App = () => {
+    return (
+        <BrowserRouter>
+            <div className={n.navbar}>
+                <Navbar/>
+            </div>
+            <div className={s.sidebar}>
+                <Sidebar/>
+            </div>
+            <div className={p.div}>
+                <Route path='/home'/>
+                <Route path='/about'/>
+                <Route path='/login' component={Pole}/>
+            </div>
+        </BrowserRouter>
+    );
+};
 export default App;

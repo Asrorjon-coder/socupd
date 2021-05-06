@@ -1,0 +1,40 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+}
+.nul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.nul li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+.nul li:last-child {
+    border-right: none;
+    float: right;
+}
+
+.nul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nul li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.nul .active {
+    background-color: #4CAF50;
+}
